@@ -6,7 +6,6 @@ body {
      height: 1080px;
      font-family: 'PT Sans', Arial, sans-serif;
      color: #000000;
-     /* overflow: hidden; */
 }
 
 * {
@@ -35,7 +34,6 @@ body {
      overflow: hidden;
      background: #FFFFF0;
      z-index: 1;
-     border: 1px solid red;
 }
 
 .hipster {
