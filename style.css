@@ -5,9 +5,8 @@ body {
      width: 100%;
      height: 1080px;
      font-family: 'PT Sans', Arial, sans-serif;
-     /* border: 1px solid red; */
      color: #000000;
-    
+     /* overflow: hidden; */
 }
 
 * {
@@ -28,8 +27,6 @@ body {
      font-style: normal;
  }
 
- 
-
 .rectangle1 {
      width: 1920px;
      max-width: 100%;
@@ -37,22 +34,41 @@ body {
      position: absolute; 
      overflow: hidden;
      background: #FFFFF0;
-
      z-index: 1;
- }
+     border: 1px solid red;
+}
 
-
-.rectangle3 {
+.hipster {
+     width: 750px;
+     height: 775px;
      position: absolute;
-     max-width: 1702px;
-     width: 100vw;
-     height: 516px;
-     background: #F0F35B;
-     top: 180px;
-     z-index: 3;
+     z-index: 5;
+     display: flex;
+     top: 40%;
+     left: -11%;
+     filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.39));
+     background-image: 
+          url(./img/Glasses.png),
+          url(./img/Vector.png);
+     background-repeat: no-repeat;
+     background-position:
+          center 191px, 
+          36px 64px;  
+     background-size: 
+          11%,
+          83%;     
+}
+
+.woman {
+     z-index: 6;
+     width: 577px;
+     height: 509px; 
+     right: 2.5%;
+     position: absolute;
+     bottom: -2%;
 } 
 
- .rectangle2 {
+.rectangle2 {
      position: absolute;
      max-width: 1596px;
      width: 100vw;
@@ -64,12 +80,11 @@ body {
 } 
 
 .container {
-    padding-left: 55px; 
-    padding-top: 42px; 
-  
-}  
+     padding-left: 55px; 
+     padding-top: 42px; 
+ } 
 
-.logo {
+ .logo {
      width: 191px;
      height: 90px;
      z-index: 2;
@@ -77,7 +92,6 @@ body {
 } 
 
 .upperText {
-     display: block;
      z-index: 6;
      width: 1268px;
      height: 320px;
@@ -98,6 +112,15 @@ body {
      color: aqua;
 }
 
+.rectangle3 {
+     position: absolute;
+     max-width: 1702px;
+     width: 100vw;
+     height: 516px;
+     background: #F0F35B;
+     top: 180px;
+     z-index: 3;
+} 
 span {
      font-size: 3rem;
      border: 1px solid #000000;
@@ -106,44 +129,13 @@ span {
      z-index: 1;
      width: 190px;
      height: 62px;
-    
      position: absolute; 
      top: 29.5%;
-     left: 1104px;
+     left: 58%;
 } 
 
-
-.hipster {
-     width: 750px;
-     height: 775px;
-     position: absolute;
-     z-index: 5;
-     display: flex;
- 
-     top: 40%;
-     left: -11%;
-
-      filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.39));
-
-    background-image: 
-          url(./img/Glasses.png),
-          url(./img/Vector.png);
-     /* transform: 
-          matrix(1, -0.06, 0.06, 1, 0, 0); */
-     background-repeat: no-repeat;
-     background-position:
-          center 191px, 
-          36px 64px;
-         
-    background-size: 
-          11%,
-          83%;     
-}
-
 .arrow {
-     
      position: absolute;
-     /* border: 1px solid blue; */
      width: 849.23px;
      height: 62px;
      display: flex;
@@ -152,23 +144,6 @@ span {
      bottom: 11%;
 }
 
-.woman {
-     z-index: 6;
-     width: 577px;
-     height: 509px; 
-     right: 2.5%;
-     position: absolute;
-     bottom: -2%;
-} 
-
-.downText {
-     font-weight: 400;
-     font-style: normal;
-     font-size: 3rem;
-     margin: auto;  
-     display: none;
- } 
-
 .icon {
      position: absolute;
      top: 50%;
@@ -176,7 +151,7 @@ span {
      transform: translate(-50%,-50%);
      width: 166px;
      height: 60px;
-   }
+}
 
 .icon, .icon-left {
      border: none;
@@ -186,16 +161,15 @@ span {
 .icon:hover {
      background-color: #cbf1f3;
      border-radius: 5px;
-     border: 1px solid #92eaef;
-     }
-
+     border: 2px solid #92eaef;
+}
 
 .icon-left {
      left: 0;
      top: 0;
      width: 178px;
      transform: rotate(180deg);
-   }
+}
    
 .arrows {
      position: absolute;
@@ -203,8 +177,7 @@ span {
      width: 85%;
      height: 8px;
      background-color: #000;
-
-   }
+}
    
 .arrows::after, .arrows::before {
      content: '';
@@ -214,20 +187,175 @@ span {
      right: -15px;
      background-color: #000;
      border-radius: 5px;
-   }
+}
    
 .arrows::after {
      top: -12px;
      transform: rotate(45deg);
-   }
+}
    
 .arrows::before {
      top: 12px;
      transform: rotate(-45deg);
-   }
+}
+
+.downText:hover {
+     color: #73fae5;
+}
 
 
+.downText {
+     font-weight: 400;
+     font-style: normal;
+     font-size: 3rem;
+     margin: auto;  
+     display: none;
+ } 
 
-@media screen and (max-width: 1596px) {
+
+@media screen and (min-width: 1921px) {
+     .rectangle1, .rectangle2, .rectangle3 {
+          width: 100vw;
+     }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1860px) {
+     .arrow {
+          min-width: 670px;
+          right: 30%;
+          width: auto;
+          bottom: 0;
+          top: 54%;
+     }
+}
+
+
+@media screen and (min-width: 1080px) and (max-width: 1365px) {
+     .text {
+          font-size: 78px;
+     }
+     .arrow {
+          right: 23%;
+          transform: scale(0.6, 0.6) ;
+     }
+
+     .container {
+          padding-left: 0;
+          padding-top: 72px;
+     }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1079px) {
+   
+     .container {
+          padding-top: 10vw;
+     }  
+     .hipster {
+          top: 55%;
+          background-position:
+               265px 160px,
+               36px 64px;
+          background-size: 
+               8%,
+               63%;     
+     }  
+}   
+
+@media screen and (min-width: 759px) and (max-width: 1079px) {
+     .woman {
+          width: 70%;
+          height: auto;
+          left: 55%;
+     }
+     .woman img {
+          max-width: 60%;
+     }
+     
+     .arrow {
+          left: 5%;
+          right: 0;
+          top: 54%;
+     }
+} 
+
+@media screen and (min-width: 641px) and (max-width: 959px) {
+     .text {
+          padding: 0 5%;   
+     }
+
+     .upperText {
+          display: inline;
+     }
+
+     .hipster {
+          left: auto;
+          right: 0;
+     }
+
+     .woman, .arrow {
+          display: none;
+     }
+}
+
+@media screen and (min-width: 641px) and (max-width: 759px) {
+     .woman {
+          right: 0;
+          left: 0;
+     }  
+}
+
+@media screen and (min-width: 320px) and (max-width: 1365px) {
+     .logo {
+          margin: auto;
+     } 
+     .container {
+          padding-left: 0;
+     }
+
+     .upperText {
+          width: max-content;
+          height: auto;
+          margin: auto;
+     }
+     .text {
+          font-size: 64px;
+     }
+}
+
+@media screen and (max-width: 640px) {
+     .text {
+          padding: 0 5%; 
+     }
+
+     .upperText {
+          display: inline;
+     }
+
+     .hipster, .arrow {
+          display: none;
+     }
+
+     .rectangle2 {
+          height: inherit;
+     }
+
+     .woman {
+          width: 100%;
+          height: auto;
+          bottom: 7%;
+     }
+     .woman img {
+          max-width: 95%;
+     }  
 
 }
+
+
+
+
+
+
+
+
+
+
