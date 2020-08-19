@@ -5,25 +5,26 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Тестовое задание</title>
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="css/animate.css">
+     
 </head>
 <body>
      <div class="rectangle1">
-          <div class = "hipster group">
-               <img src="img/Vector.png" alt="Hipster">
+          <div class = "hipster animated fadeInLeft">           
           </div>
-               <!-- <img class = "glasses" src  ="" alt="Glasses"> -->
-               <img class = "woman" src="img/Женщина с флагом.png" alt="Woman with flag">
-          
+               <div class = "woman animated fadeInRight">
+                    <img src="img/Женщина с флагом.png" alt="Woman with flag">
+               </div>
           <div>
      </div>
      
      <div class = "rectangle2">
           <div class="container">
-               <div class = "logo">
+               <div class = "logo animated bounceInDown">
                <img src="img/Логотип.png" alt="Logo">
           </div>
           <div class = "upperText">
-               <p class = "text">
+               <p class = "text appear">
                     Привет! <br>
                     Я тестовый текст <br>
                     Покажи мне чудеса анимации 
@@ -40,8 +41,17 @@
      </div>
      
      <div class = "arrow">
-        <p class = "downText">их тоже можно</p>
+          <button class="icon">
+               <div class="arrows"></div>
+          </button>
+        <p class = "downText appear">их тоже можно </p>
+        <button class="icon icon-left">
+          <div class="arrows"></div>
+        </button>
      </div>
+     
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
      
 </body>
 </html>
