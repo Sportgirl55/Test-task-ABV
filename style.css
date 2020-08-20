@@ -86,7 +86,6 @@ body {
      width: 191px;
      height: 90px;
      z-index: 2;
-     display: block;
 } 
 
 .upperText {
@@ -200,7 +199,6 @@ span {
 .downText:hover {
      color: #73fae5;
 }
-
 
 .downText {
      font-weight: 400;
